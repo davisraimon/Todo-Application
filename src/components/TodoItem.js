@@ -65,7 +65,12 @@ const TodoItem = ({
         <Tag className="todo-tag-bucket">{bucket}</Tag>
       </div>
       <div className="todo-item">
-        <Tag color={completedStatus ? "cyan" : "red"} className="todo-tag">
+        <Tag
+          color={completedStatus ? "cyan" : "red"}
+          className={`${
+            completed ? "todo-tag todo-tag-completed " : "todo-tag"
+          }`}
+        >
           {title}
         </Tag>
       </div>

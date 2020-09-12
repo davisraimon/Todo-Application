@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import TodoItem from "./TodoItem";
 import { connect } from "react-redux";
 import { getTodo } from "../actions/todoActions";
-import { List, Spin, Space } from "antd";
+import { List, Spin, Space, Input } from "antd";
 import "../App.css";
 
 const Contents = ({

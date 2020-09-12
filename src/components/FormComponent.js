@@ -78,7 +78,7 @@ const FormComponent = ({ addTodo }) => {
                 onChange={(value) => {
                   onChangeBucket(value);
                 }}
-                placeholder="Select a bucket"
+                placeholder="Select a Category"
                 dropdownRender={(menu) => (
                   <div>
                     {menu}
@@ -110,7 +110,7 @@ const FormComponent = ({ addTodo }) => {
                           onAddBucket();
                         }}
                       >
-                        Add Bucket
+                        Add Category
                       </a>
                     </div>
                   </div>

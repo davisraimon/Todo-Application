@@ -9,16 +9,24 @@
   -webkit-filter: blur(8px);
   pointer-events: none;
 }
-.error{
-  color:red
-
+.error {
+  color: red;
 }
-.no-error{
-  display:none
+.no-error {
+  display: none;
 }
-@media screen and (max-width: 800px) {
+.todo-tag-completed {
+  text-decoration: line-through;
+}
+@media screen and (max-width: 600px) {
   .hide-sm {
     display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .todo-tag {
+    text-align: left;
+    width: 400px !important;
   }
 }
 @media screen and (max-width: 992px) {
@@ -26,7 +34,7 @@
     padding: 16px 16px;
   }
 }
-.sticky{
+.sticky {
   position: fixed;
   top: 0;
 }

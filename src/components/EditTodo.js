@@ -27,9 +27,7 @@ const EditTodo = ({
   history,
 }) => {
   const [items, setItems] = useState({
-    buckets: JSON.parse(localStorage.getItem("buckets")) || [
-      "Important",
-    ],
+    buckets: JSON.parse(localStorage.getItem("buckets")) || ["Important"],
     newBucket: "",
   });
 
@@ -117,7 +115,7 @@ const EditTodo = ({
                   onChange={(value) => {
                     onChangeBucket(value);
                   }}
-                  placeholder="Select a bucket"
+                  placeholder="Select a Category"
                   dropdownRender={(menu) => (
                     <div>
                       {menu}
@@ -149,7 +147,7 @@ const EditTodo = ({
                             onAddBucket();
                           }}
                         >
-                          Add Bucket
+                          Add Category
                         </a>
                       </div>
                     </div>
