@@ -1,6 +1,6 @@
 from flask_pymongo import pymongo
 import os
-con_string = os.environ.get('MONGODB_URL')
+con_string = os.environ.get('MONGODB_URL',None)
 
 def dbconnect():    
     client = pymongo.MongoClient(con_string)
