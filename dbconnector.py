@@ -6,5 +6,7 @@ def dbconnect():
     client = pymongo.MongoClient(con_string)
     db = client.get_database('test')
     collection = db.get_collection('todo')
+    print(collection)
+    print(con_string)
     print("------DB Connected------")
     return collection
