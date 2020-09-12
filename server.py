@@ -3,8 +3,12 @@ import json
 from dbconnector import dbconnect
 from bson import ObjectId,json_util
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='./build', static_url_path='/')
 collection = dbconnect()
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 @app.route('/get-todo',methods=['GET'])
 def get_todo():   
