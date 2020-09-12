@@ -3,11 +3,19 @@ import PropTypes from "prop-types";
 import { Tooltip, Tag, List, Button, Popconfirm, Switch } from "antd";
 import { CloseOutlined, CheckOutlined, EditOutlined } from "@ant-design/icons";
 import { connect } from "react-redux";
-import { removeTodo, updateTodo } from "../actions/todoActions";
+import { removeTodo, updateTodo, setLoadingTrue } from "../actions/todoActions";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const TodoItem = ({ id, bucket, title, completed, removeTodo, updateTodo }) => {
+const TodoItem = ({
+  id,
+  bucket,
+  title,
+  completed,
+  removeTodo,
+  updateTodo,
+  setLoadingTrue,
+}) => {
   const [completedStatus, setCompletedStatus] = useState(completed);
   const onTodoToggle = () => {
     setCompletedStatus(!completedStatus);
@@ -42,7 +50,12 @@ const TodoItem = ({ id, bucket, title, completed, removeTodo, updateTodo }) => {
           </Button>
         </Popconfirm>,
         <Button className="remove-todo-button" type="primary" shape="circle">
-          <Link to={`/edit/${id}`}>
+          <Link
+            to={`/edit/${id}`}
+            onClick={() => {
+              setLoadingTrue();
+            }}
+          >
             <EditOutlined />
           </Link>
         </Button>,
@@ -65,6 +78,9 @@ TodoItem.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   updateTodo: PropTypes.func.isRequired,
+  setLoadingTrue: PropTypes.func.isRequired,
 };
 
-export default connect(null, { removeTodo, updateTodo })(TodoItem);
+export default connect(null, { removeTodo, updateTodo, setLoadingTrue })(
+  TodoItem
+);

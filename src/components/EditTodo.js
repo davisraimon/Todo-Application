@@ -29,7 +29,6 @@ const EditTodo = ({
   const [items, setItems] = useState({
     buckets: JSON.parse(localStorage.getItem("buckets")) || [
       "Important",
-      "Medium",
     ],
     newBucket: "",
   });

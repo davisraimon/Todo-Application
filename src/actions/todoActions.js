@@ -1,4 +1,9 @@
-import { GET_TODO, GET_TODO_BY_ID, CLEAR_TODO_BY_ID } from "./types";
+import {
+  GET_TODO,
+  GET_TODO_BY_ID,
+  CLEAR_TODO_BY_ID,
+  SET_LOADING_TRUE,
+} from "./types";
 import axios from "axios";
 import { message } from "antd";
 
@@ -57,4 +62,7 @@ export const updateTodo = (id, data) => async (dispatch) => {
   } catch (err) {
     message.error("Server Error");
   }
+};
+export const setLoadingTrue = () => async (dispatch) => {
+  dispatch({ type: SET_LOADING_TRUE });
 };
