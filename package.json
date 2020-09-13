@@ -15,11 +15,12 @@
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "sinon": "^9.0.3"
   },
-  "jest":{
-    "moduleNameMapper":{
-         "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
     }
   },
   "scripts": {
@@ -48,6 +49,9 @@
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "concurrently": "^5.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15": "^1.4.2",
+    "enzyme-adapter-react-16": "^1.15.4",
     "jest": "^26.4.2",
     "react-test-renderer": "^16.13.1"
   },
