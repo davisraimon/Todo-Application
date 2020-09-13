@@ -37,6 +37,7 @@ const FormComponent = ({ addTodo }) => {
   const onChangeBucketField = (e) => {
     setItems({ buckets: [...buckets], newBucket: e.target.value });
   };
+  // Validating title field
   const [error, setError] = useState(false);
   const validate = () => {
     if (title === "") {
@@ -46,6 +47,7 @@ const FormComponent = ({ addTodo }) => {
     setError(false);
     return true;
   };
+  // Submitting the form
   const onClickSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
@@ -53,6 +55,7 @@ const FormComponent = ({ addTodo }) => {
       clear();
     }
   };
+  // Clear the title field
   const clear = () => {
     setFormData({ bucket: "Important", title: "" });
   };

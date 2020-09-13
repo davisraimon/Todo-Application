@@ -12,7 +12,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Header title="TODO Application" />
+        <Header title="TODO APPLICATION" />
         <Router>
           <Route exact path="/" component={FormComponent} />         
           <Route exact path="/edit/:id" component={EditTodo} />

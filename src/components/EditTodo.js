@@ -69,6 +69,7 @@ const EditTodo = ({
   const onChangeBucketField = (e) => {
     setItems({ buckets: [...buckets], newBucket: e.target.value });
   };
+  //Validating title field
   const [error, setError] = useState(false);
   const validate = () => {
     if (title === "") {
@@ -78,6 +79,7 @@ const EditTodo = ({
     setError(false);
     return true;
   };
+  //Submitting the form
   const onClickSubmit = (e) => {
     e.preventDefault();
     if (validate()) {

@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import "../App.css";
 
 const Header = ({ title }) => {
-  return <></>;
+  return (
+    <>
+      <h3>{title}</h3>
+    </>
+  );
 };
 
 Header.propTypes = {

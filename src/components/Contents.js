@@ -6,6 +6,7 @@ import { getTodo } from "../actions/todoActions";
 import { List, Spin, Space, Input } from "antd";
 import "../App.css";
 
+// All Todoitems are mapped and rendered here 
 const Contents = ({
   getTodo,
   todoReducer: { todoList, editmode, loading },
