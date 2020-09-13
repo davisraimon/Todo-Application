@@ -7,6 +7,7 @@ import { removeTodo, updateTodo, setLoadingTrue } from "../actions/todoActions";
 import { Link } from "react-router-dom";
 import "../App.css";
 
+//Individual todo item
 const TodoItem = ({
   id,
   bucket,
