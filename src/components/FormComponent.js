@@ -128,7 +128,7 @@ const FormComponent = ({ addTodo }) => {
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={10} lg={14} xl={16}>
-            <Form.Item name="title">
+            <Form.Item>
               <Input
                 placeholder="What needs to be done?"
                 type="text"
